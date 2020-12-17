@@ -218,10 +218,10 @@
                                 $idIT = $filaIT['id'];
                                 echo "<div id='item'><p id='lista'>".$filaIT['item']." | ";
                                 if($filaIT['completed']){
-                                    echo "hecho</p><form action='".BASE."redirect/editI' method='post'> <button type='submit' value='$idIT' name='idIT'>Editar item</button> </form><br><form action='/user/elimI' method='post'> <button type='submit' value='$idIT' name='idITE'>Eliminar item</button> </form><div>";
+                                    echo "hecho</p><form action='".BASE."redirect/editI' method='post'> <button type='submit' value='$idIT' name='idIT'>Editar item</button> </form><br><form action='".BASE."user/elimI' method='post'> <button type='submit' value='$idIT' name='idITE'>Eliminar item</button> </form><div>";
                                 }
                                 else{
-                                    echo "por hacer</p><form action='".BASE."redirect/editI' method='post'> <button type='submit' value='$idIT' name='idIT'>Editar item</button> </form><br><form action='/user/elimI' method='post'> <button type='submit' value='$idIT' name='idITE'>Eliminar item</button> </form><div>";
+                                    echo "por hacer</p><form action='".BASE."redirect/editI' method='post'> <button type='submit' value='$idIT' name='idIT'>Editar item</button> </form><br><form action='".BASE."user/elimI' method='post'> <button type='submit' value='$idIT' name='idITE'>Eliminar item</button> </form><div>";
                                 }
                             }
                             
