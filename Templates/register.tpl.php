@@ -8,7 +8,7 @@
   <h2>Registro:</h2>
                                         
   <form action="<?=BASE?>user/crearUser" method="post">
-    <p>Nombre: <?php echo $_COOKIE["nombre"] ?></p>
+    <p>Nombre: <?php echo $_SESSION["nombre"] ?></p>
     <p>Contraseña: <input type="password" name="password"></p>
     <p>Repetir contraseña: <input type="password" name="password2"></p>
     <p>Email: <input type="text" name="email"></p>

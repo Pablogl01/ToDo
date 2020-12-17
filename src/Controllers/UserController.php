@@ -93,9 +93,10 @@
                 }
                 else{
                     if ($quieroR){
+                        $_SESSION["nombre"]=$nombre;
                         $dataview=['title'=>'register'];
                         $this->render($dataview,"register");
-                        setcookie("nombre",$nombre);
+                        //setcookie("nombre",$nombre);
                     }
                     else{
                         $dataview=['title'=>'login'];
@@ -110,7 +111,7 @@
 
         function crearUser(){
             $db=$this->getDB();
-            $name = $_SESSION['uname'];
+            $name = $_SESSION['nombre'];
             $pass = filter_input(INPUT_POST,"password");
             $pass2 = filter_input(INPUT_POST,"password2");
             $email = filter_input(INPUT_POST,"email");
@@ -129,7 +130,7 @@
                 $datos = '*';
             }
             $command3 = "
-                INSERT INTO users (email,uname,passw,role) VALUES (':email',':name',':passE',:role)";
+                INSERT INTO users (email,uname,passw,role) VALUES (:email,:name,:passE,:role)";
             try{
                 $result = $db->prepare($command3);
                 $result->bindParam(":email", $email);
