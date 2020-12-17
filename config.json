@@ -14,8 +14,8 @@
         "dbname":"GaPa_prouf1",
         "dbuser":"GaPa_prouf1",
         "dbpass":"linuxlinux",
-        "web":"/m07/ToDo",
-        "root":"/m07/ToDo"
+        "web":"/m07/ToDo/",
+        "root":"/m07/ToDo/"
 
     }
 }
